@@ -1,0 +1,52 @@
+/********************************************************************Bad example***************************************************************************************************
+
+interface IEmail {
+    public void setSender(String sender);
+    public void setReceiver(String receiver);
+    public void setContent(String content);
+}
+
+class Email implements IEmail {
+    
+    public void setSender(String sender) {
+        // set sender;
+    }
+    
+    public void setReceiver(String receiver) {
+        // set receiver;
+    }
+    
+    public void setContent(String content) {
+        // set content; 
+    }
+}
+
+/********************************************************************Good example***************************************************************************************************
+// Interface for managing email addresses
+interface IEmailAddress {
+    public void setSender(String sender);
+    public void setReceiver(String receiver);
+}
+
+// Interface for handling email content
+interface IContent {
+    public void setContent(String content);
+}
+
+// Class for handling email addresses
+class EmailAddress implements IEmailAddress {
+    public void setSender(String sender) {
+        // set sender
+    }
+    
+    public void setReceiver(String receiver) {
+        // set receiver
+    }
+}
+
+// Class for handling email content
+class Content implements IContent {
+    public void setContent(String content) {
+        // set content
+    }
+}
